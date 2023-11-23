@@ -1,3 +1,44 @@
+<?php
+session_start();
+$servidor = 'localhost';
+$cuenta = 'root';
+$password = '';
+$bd = 'bdprueba1';
+$_SESSION['id'] = '';
+$_SESSION['nom'] = '';
+$_SESSION['cue'] = '';
+$_SESSION['con'] = '';
+$conexion = new mysqli($servidor, $cuenta, $password, $bd);
+$sql = "SELECT * FROM usuarios";
+$resultado = $conexion->query($sql);
+if ($conexion->connect_errno) {
+    die('Error en la conexion');
+}
+if (isset($_POST['submit'])) {
+    $modificar = $_POST["modificar"];
+    $_SESSION["modificar2"] = $modificar;
+    $sql2 = "SELECT *
+        FROM usuarios
+        WHERE id='$modificar'
+    ";
+    $resultado = $conexion->query($sql2);
+    while ($fila = $resultado->fetch_assoc()) {
+        $_SESSION['id'] = $fila['id'];
+        $_SESSION['nom'] = $fila['nombre'];
+        $_SESSION['cue'] = $fila['cuenta'];
+        $_SESSION['con'] = $fila['contrasena'];
+    }
+}
+if (isset($_POST['mod'])) {
+    $uno = $_POST["id2"];
+    $dos = $_POST["nombre2"];
+    $tres = $_POST["cuenta2"];
+    $cuatro = $_POST["contra2"];
+    $modificar1 = $_SESSION["modificar2"];
+    $ne = "UPDATE usuarios SET id='$uno', nombre='$dos', cuenta='$tres', contrasena='$cuatro' WHERE id='$modificar1'";
+    $fin = $conexion->query($ne);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
