@@ -102,6 +102,36 @@ if (isset($_POST['mod'])) {
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <h2>Modificar Usuario</h2>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label for="id2">ID</label>
+                                <input type="number" name="id2" id="id2" class="form-control" value="<?php echo $_SESSION["id"]; ?>">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="nombre2">NOMBRE</label>
+                                <input type="text" id="nombre2" name="nombre2" class="form-control" value="<?php echo $_SESSION["nom"]; ?>">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="cuenta2">CUENTA</label>
+                                <input type="text" id="cuenta2" name="cuenta2" class="form-control" value="<?php echo $_SESSION["cue"]; ?>">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="contra2">CONTRASEÑA</label>
+                                <input type="text" id="contra2" name="contra2" class="form-control" value="<?php echo $_SESSION['con']; ?>">
+                            </div>
+                        </div>
+                        <button type="submit" name="mod" class="btn btn-primary">Modificar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
