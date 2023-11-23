@@ -1,0 +1,79 @@
+.contenedor1 {
+    display: flex;
+  }
+  .contenedor2 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  body {
+    margin: 40px;
+    background-color: #cfe3ff; /* Light blue background */
+  }
+  .izquierdaAlta {
+    height: 300px;
+    background-color: #99b3ff; /* Light blue background with a shade */
+    border-radius: 10px;
+  }
+  .izqAlta form {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .izquierdaBaja {
+    height: 300px;
+    background-color: #66a6ff; /* Slightly darker blue background */
+    border-radius: 10px;
+  }
+  .derecha {
+    width: 60%;
+    height: 600px;
+    background-color: #99b3ff; /* Same light blue as izquierdaAlta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .estiloformulario {
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: #cfe3ff; /* Light blue background for the form */
+    border-radius: 10px;
+  }
+  td,
+  th {
+    padding: 10px;
+  }
+  body {
+    margin: 50px;
+    background-color: #cfe3ff; /* Light blue background */
+  }
+  .wrapper {
+    background-color: #fff; /* White background */
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+  }
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5em;
+  }
+  .form-row > label {
+    padding: 0.5em 1em 0.5em 0;
+    flex: 1;
+  }
+  .form-row > input {
+    flex: 2;
+  }
+  .form-row > input,
+  .form-row > button {
+    padding: 0.5em;
+  }
+  .form-row > button {
+    background: #6c757d;
+    color: #fff;
+    border: 0;
+  }
+  form {
+    width: 50%;
+  }
